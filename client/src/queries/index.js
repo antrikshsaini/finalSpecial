@@ -9,26 +9,25 @@ export const GET_PEOPLE = gql`
     }
   }
 `
-export const GET_BOAT = gql`
-  {
-    query BoatPerson($personId: String!){
-      boatPerson (personId: $personId) {
-        id
-        year
-        make
-        model
-        price
-        personId
-      }
-    }
+// export const GET_BOAT = gql`
+//   {
+//     query BoatPerson($personId: String!){
+//       boatPerson (personId: $personId) {
+//         id
+//         year
+//         make
+//         model
+//         price
+//         personId
+//       }
+//     }
     
-  }
-`
+//   }
+// `
 
 export const GET_BOATS = gql`
   {
-   
-      boats{
+      boats {
         id
         year
         make
@@ -36,8 +35,6 @@ export const GET_BOATS = gql`
         price
         personId
       }
-  
-    
   }
 `
 

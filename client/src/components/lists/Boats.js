@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { GET_BOATS } from '../../queries/index'
+import { GET_BOATS } from '../../queries'
+import Boat from "../listItems/Boat"
 
 import { List } from 'antd'
 
