@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Card, List } from 'antd'
 
-import { EditOutlined } from '@ant-design/icons'
+import { EditOutlined, RightOutlined } from '@ant-design/icons'
 import UpdatePerson from '../forms/UpdatePerson'
 import RemovePerson from '../buttons/RemovePerson'
 
@@ -16,6 +16,7 @@ const Person = props => {
   const [firstName, setFirstName] = useState(props.firstName)
   const [lastName, setLastName] = useState(props.lastName)
   const [editMode, setEditMode] = useState(false)
+  // const [editRightMode, setEditRightMode] = useState(false)
   const styles = getStyles()
 
   const fullName = () => {
@@ -36,6 +37,7 @@ const Person = props => {
   }
 
   const handleButtonClick = () => setEditMode(!editMode)
+  // const handleButtonRightClick = () => setEditRightMode(!editRightMode)
 
   return (
     <List.Item key={props.id}>
@@ -56,6 +58,8 @@ const Person = props => {
           style={styles.card}
         >
           {fullName()}
+
+          
         </Card>
       )}
     </List.Item>

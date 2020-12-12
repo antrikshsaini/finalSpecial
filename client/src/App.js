@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 import Title from './components/layout/Title'
-
+import Boats from "./components/lists/Boats"
 import { Layout } from 'antd'
 import AddPerson from './components/forms/AddPerson'
 
@@ -23,6 +23,7 @@ const App = () => (
         <Title />
         <AddPerson />
         <People />
+        <Boats />
       </Content>
     </div>
   </ApolloProvider>

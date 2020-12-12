@@ -11,14 +11,33 @@ export const GET_PEOPLE = gql`
 `
 export const GET_BOAT = gql`
   {
-    boat {
-      id
-      year
-      make
-      model
-      price
-      personId
+    query BoatPerson($personId: String!){
+      boatPerson (personId: $personId) {
+        id
+        year
+        make
+        model
+        price
+        personId
+      }
     }
+    
+  }
+`
+
+export const GET_BOATS = gql`
+  {
+   
+      boats{
+        id
+        year
+        make
+        model
+        price
+        personId
+      }
+  
+    
   }
 `
 export const ADD_PERSON = gql`

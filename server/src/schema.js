@@ -189,12 +189,11 @@ const resolvers = {
       return person;
     },
     updateBoat: (root, args) => {
-      const boat = find(boat, { id: args.id, personId: args.personId  })
+      const boat = find(boats, { id: args.id })
       if (!boat) {
         throw new Error(`Couldn't find boat with id ${args.id}`)
       }
 
-      boat.id = args.id
       boat.year = args.year
       boat.make = args.make
       boat.model = args.model
@@ -213,7 +212,7 @@ const resolvers = {
       return removedPerson;
     },
     removeBoat: (root, args) => {
-      const removedBoat = find(boats, { id: args.id , personId: args.personId })
+      const removedBoat = find(boats, { id: args.id })
       if (!removedBoat) {
         throw new Error(`Couldn't find boat with id ${args.id}`)
       }
