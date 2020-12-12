@@ -67,10 +67,10 @@ const Boat = (props) => {
         />
       ) : (
         <Card
-          // actions={[
-          //   <EditOutlined key="edit" onClick={handleButtonClick} />,
-          //   <RemoveBoat id={id} year={year} make={make} model={model} price={price} personId={personId} />,
-          // ]}
+          actions={[
+            <EditOutlined key="edit" onClick={handleButtonClick} />,
+            <RemoveBoat id={id} year={year} make={make} model={model} price={price} personId={personId} />,
+          ]}
           style={styles.card}
         >
          {fullName()}
